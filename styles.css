@@ -20,6 +20,22 @@ html {
         display: grid;
         place-items: center;
 }
+@media screen and (max-width: 740px){
+  .loader {
+    position: absolute;
+    top: 21%;
+    left: 50%;
+    z-index: 10;
+    width: 160px;
+    height: 100px;
+    margin-left: -80px;
+    margin-top: -50px;
+    border-radius: 5px;
+    background: #1c1f26;
+    -webkit-animation: dot1_ 3s cubic-bezier(0.55, 0.3, 0.24, 0.99) infinite;
+    animation: dot1_ 3s cubic-bezier(0.55, 0.3, 0.24, 0.99) infinite;
+}
+}
 .loader {
     position: absolute;
     top: 24%;
