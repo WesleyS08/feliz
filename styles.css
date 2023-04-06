@@ -63,17 +63,37 @@ html {
 }
 
 .loader {
-    position: absolute;
-    top: 50%; /* set the top position to the center of the container */
-    left: 50%; /* set the left position to the center of the container */
-    transform: translate(-50%, -50%); /* adjust the position by moving it up and left by 50% of its own width and height */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 10;
     width: 160px;
     height: 100px;
+    margin: 0 auto;
     border-radius: 5px;
     background: #1c1f26;
+    -webkit-animation: dot1_ 3s cubic-bezier(0.55, 0.3, 0.24, 0.99) infinite;
     animation: dot1_ 3s cubic-bezier(0.55, 0.3, 0.24, 0.99) infinite;
 }
+
+@media screen and (min-width: 330px) {
+    .loader {
+        top: 30%;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .loader {
+        top: 40%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .loader {
+        top: 50%;
+    }
+}
+
 
 
 .loader:nth-child(2) {
