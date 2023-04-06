@@ -17,29 +17,20 @@ html {
 
 /* Setting up the body element */
 body {
-  margin: 0;
+  overflow: hidden;
 }
 
-/* Media queries for the border and font size */
+/* Media queries for the body element */
 @media screen and (min-width: 768px) {
-  .grad-border {
-    width: 60vw;
-    height: 60vw;
-    max-width: 650px;
-    max-height: 650px;
-  }
-
-  .texto p {
-    font-size: 1.2rem;
+  body {
+    overflow: hidden;
   }
 }
 
 @media screen and (min-width: 992px) {
   .grad-border {
-    width: 50vw;
-    height: 50vw;
-    max-width: 750px;
-    max-height: 750px;
+    width: 650px;
+    height: 650px;
   }
 
   .texto p {
@@ -49,10 +40,8 @@ body {
 
 @media screen and (min-width: 1200px) {
   .grad-border {
-    width: 40vw;
-    height: 40vw;
-    max-width: 750px;
-    max-height: 750px;
+    width: 750px;
+    height: 750px;
   }
 
   .texto p {
@@ -62,9 +51,11 @@ body {
 
 /* Setting up the gradient border */
 .grad-border {
-  border: 3vw solid #a4a8c4;
+  border: 5px solid #a4a8c4;
   border-image: linear-gradient(to right, #6c5b7b, #9b4f96) 1;
-  padding: 2vw;
+  width: 350px;
+  height: 350px;
+  padding: 20px;
   text-align: center;
   animation: border-animation 2s infinite linear;
   font-family: 'Oswald', sans-serif;
@@ -86,22 +77,16 @@ body {
 
 /* Setting up the loader */
 .loader {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.loader div {
-  width: 16vw;
-  height: 10vw;
-  margin: 0 1vw;
+  width: 160px;
+  height: 100px;
   border-radius: 5px;
   background: #1c1f26;
+  animation: dot1_ 3s cubic-bezier(0.55, 0.3, 0.24, 0.99) infinite;
 }
 
 .loader:nth-child(2) {
@@ -296,17 +281,17 @@ body {
   color: #fff;
   text-transform: uppercase;
   margin-bottom: 0;
-}
-
-.texto p {
+  }
+  
+  .texto p {
   font-size: 1.2rem;
   font-family: 'Poppins', sans-serif;
   color: #fff;
   margin-top: 0;
-}
-
-/* Styles for the button inside the border */
-.btn {
+  }
+  
+  /* Styles for the button inside the border */
+  .btn {
   display: inline-block;
   background-color: #fff;
   color: #000;
@@ -320,19 +305,19 @@ body {
   letter-spacing: 2px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-}
-
-.btn:hover {
+  }
+  
+  .btn:hover {
   background-color: #000;
   color: #fff;
-}
-
-.btn:active {
+  }
+  
+  .btn:active {
   transform: scale(0.95);
-}
-
-/* Styles for the overlay */
-.overlay {
+  }
+  
+  /* Styles for the overlay */
+  .overlay {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -346,75 +331,75 @@ body {
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease-in-out;
-}
-
-.overlay.active {
+  }
+  
+  .overlay.active {
   opacity: 1;
   pointer-events: all;
-}
-
-.overlay-content {
+  }
+  
+  .overlay-content {
   background-color: #fff;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
-}
-
-.overlay-content h2 {
+  }
+  
+  .overlay-content h2 {
   font-size: 1.8rem;
   font-family: 'Oswald', sans-serif;
   margin-bottom: 20px;
-}
-
-.overlay-content p {
+  }
+  
+  .overlay-content p {
   font-size: 1.2rem;
   font-family: 'Poppins', sans-serif;
   margin-bottom: 30px;
-}
-
-.overlay-content .btn {
+  }
+  
+  .overlay-content .btn {
   margin-top: 0;
-}
-
-@media screen and (min-width: 768px) {
-  .overlay-content {
-    max-width: 500px;
   }
-}
-
-@media screen and (min-width: 992px) {
+  
+  @media screen and (min-width: 768px) {
   .overlay-content {
-    max-width: 600px;
+  max-width: 500px;
   }
-
-
+  }
+  
+  @media screen and (min-width: 992px) {
+  .overlay-content {
+  max-width: 600px;
+  }
+  
+ 
   .overlay-content h2 {
-    font-size: 2.2rem;
+      font-size: 2.2rem;
   }
-
+  
   .overlay-content p {
-    font-size: 1.5rem;
+      font-size: 1.5rem;
   }
-}
-
-@media screen and (min-width: 1200px) {
+  }
+  
+  @media screen and (min-width: 1200px) {
   .overlay-content {
-    max-width: 700px;
+  max-width: 700px;
   }
-
-
+  
+ 
   .overlay-content h2 {
-    font-size: 2.5rem;
+      font-size: 2.5rem;
   }
-
+  
   .overlay-content p {
-    font-size: 1.8rem;
+      font-size: 1.8rem;
   }
-}
-
-/* Styles for the close button */
-.close-btn {
+  }
+  
+  /* Styles for the close button */
+  .close-btn {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -425,12 +410,11 @@ body {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   outline: none;
-}
-
-.close-btn:hover {
+  }
+  
+  .close-btn:hover {
   transform: rotate(180deg);
-}
-
+  }
 .flower {
   display: grid;
   grid-template-columns: 1em 1em;
