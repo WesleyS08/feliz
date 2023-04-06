@@ -64,18 +64,17 @@ html {
 
 .loader {
     position: absolute;
-    top: 27%;
-    left: 50%;
+    top: 50%; /* set the top position to the center of the container */
+    left: 50%; /* set the left position to the center of the container */
+    transform: translate(-50%, -50%); /* adjust the position by moving it up and left by 50% of its own width and height */
     z-index: 10;
     width: 160px;
     height: 100px;
-    margin-left: -80px;
-    margin-top: -50px;
     border-radius: 5px;
     background: #1c1f26;
-    -webkit-animation: dot1_ 3s cubic-bezier(0.55, 0.3, 0.24, 0.99) infinite;
     animation: dot1_ 3s cubic-bezier(0.55, 0.3, 0.24, 0.99) infinite;
 }
+
 
 .loader:nth-child(2) {
     z-index: 11;
