@@ -5,6 +5,8 @@ html {
     height: 100%;
     background: rgb(13,0,36);
     background: linear-gradient(187deg, rgba(13,0,36,1) 10%, rgba(77,9,121,1) 46%, rgba(213,0,255,1) 100%);display: grid;
+    	background-repeat: no-repeat;
+			background-size: cover;
     place-items: center;
 }
 @media screen and (mim-width: 330px) {
@@ -17,6 +19,8 @@ html {
         height: 123vh;
         /* background: rgb(13,0,36); */
         background: linear-gradient(187deg, rgba(13,0,36,1) 10%, rgba(77,9,121,1) 46%, rgba(213,0,255,1) 100%);
+        	background-repeat: no-repeat;
+			background-size: cover;
         display: grid;
         place-items: center;
 }
