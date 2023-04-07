@@ -5,8 +5,8 @@ html {
     height: 100%;
     background: rgb(13,0,36);
     background: linear-gradient(187deg, rgba(13,0,36,1) 10%, rgba(77,9,121,1) 46%, rgba(213,0,255,1) 100%);display: grid;
-    	
-			background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
     place-items: center;
 }
 @media screen and (mim-width: 330px) {
@@ -19,8 +19,8 @@ html {
         height: 123vh;
         /* background: rgb(13,0,36); */
         background: linear-gradient(187deg, rgba(13,0,36,1) 10%, rgba(77,9,121,1) 46%, rgba(213,0,255,1) 100%);
-        	
-			background-size: cover;
+        background-size: cover;
+  background-repeat: no-repeat;
         display: grid;
         place-items: center;
 }
@@ -54,22 +54,17 @@ html {
     border-image: linear-gradient(to right, #6c5b7b, #9b4f96) 1;
     padding: 20px;
     text-align: center;
-    -webkit-animation: color-change-4x 6s linear infinite alternate both;
-	        animation: color-change-4x 6s linear infinite alternate both;
+     animation: rotate-animation 2s infinite linear;
 }
 
-@keyframes color-change-4x {
-  0% {
-    background: #19dcea;
+@keyframes rotate-animation {
+  from {
+    transform: rotate(0deg);
+    border-image: linear-gradient(to right, #c154c1, #d781c6) 1;
   }
-  33.3333% {
-    background: #b22cff;
-  }
-  66.666% {
-    background: #ea2222;
-  }
-  100% {
-    background: #f5be10;
+  to {
+    transform: rotate(360deg);
+    border-image: linear-gradient(to right, rgb(149, 14, 167), rgb(159, 10, 185)) 1;
   }
 }
 
