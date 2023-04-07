@@ -51,7 +51,7 @@ html {
     width: 350px;
     height: 350px;
     background: #a4a8c4;
-       border-image: linear-gradient(to right, #3cb4dc, #e90b0b) 1;
+        border-image: linear-gradient(to right, #3cb4dc, #e90b0b) 1;
     padding: 20px;
     text-align: center;
     animation: border-animation 2s infinite linear;
@@ -59,15 +59,15 @@ html {
 
 @keyframes border-animation {
     0% {
-        border-image: linear-gradient(to right, #c154c1, #3cb4dc) 1;
+        border-image: linear-gradient(to right, #e90b0b, #3cb4dc) 1;
     }
 
     50% {
-        border-image: linear-gradient(to right, #3cb4dc, rgb(118, 10, 135)) 1;
+        border-image: linear-gradient(to right, #3cb4dc, #e90b0b) 1;
     }
 
     100% {
-        border-image: linear-gradient(to right, rgb(149, 14, 167), #3cb4dc) 1;
+        border-image: linear-gradient(to right, #e90b0b, #3cb4dc) 1;
     }
 }
 
