@@ -51,21 +51,24 @@ html {
     width: 350px;
     height: 350px;
     background: #a4a8c4;
-    border-image: linear-gradient(to right, #6c5b7b, #9b4f96) 1;
+       border-image: linear-gradient(to right, #3cb4dc, #e90b0b) 1;
     padding: 20px;
     text-align: center;
-     animation: rotate-animation 2s infinite linear;
+    animation: border-animation 2s infinite linear;
 }
 
-@keyframes rotate-animation {
-  from {
-    transform: rotate(0deg);
-    border-image: linear-gradient(to right, #c154c1, #d781c6) 1;
-  }
-  to {
-    transform: rotate(360deg);
-    border-image: linear-gradient(to right, rgb(149, 14, 167), rgb(159, 10, 185)) 1;
-  }
+@keyframes border-animation {
+    0% {
+        border-image: linear-gradient(to right, #c154c1, #3cb4dc) 1;
+    }
+
+    50% {
+        border-image: linear-gradient(to right, #3cb4dc, rgb(118, 10, 135)) 1;
+    }
+
+    100% {
+        border-image: linear-gradient(to right, rgb(149, 14, 167), #3cb4dc) 1;
+    }
 }
 
 
