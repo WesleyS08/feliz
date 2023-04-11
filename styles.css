@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Poppins:wght@100;200;300;400;500&display=swap');
 
-
+body {
+overflow: hidden;
+}
 html {
     height: 100%;
     background: rgb(13,0,36);
@@ -11,8 +13,7 @@ html {
 }
 @media screen and (mim-width: 330px) {
     body{
-        overflow-x: hidden;
-        overflow-y: hidden;
+        overflow: hidden;
         height: 100vh !important;
     }
     html {
