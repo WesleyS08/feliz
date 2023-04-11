@@ -13,7 +13,7 @@ html {
 }
 @media screen and (mim-width: 330px) {
     body{
-        overflow: hidden;
+        width:100vh !important;
         height: 100vh !important;
     }
     html {
