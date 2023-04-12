@@ -3,19 +3,20 @@
 
 html {
     height: 100%;
-   background: rgb(13,0,36);
+    background: rgb(13,0,36);
 background: linear-gradient(29deg, rgba(13,0,36,1) 10%, rgba(108,9,121,1) 65%, rgba(160,0,255,1) 100%);
-  
     place-items: center;
 }
 @media screen and (mim-width: 330px) {
-   
+    body{
+        overflow-x: hidden;
+        overflow-y: hidden;
+        height: 100vh !important;
+    }
     html {
         height: 123vh;
         background: rgb(13,0,36);
 background: linear-gradient(29deg, rgba(13,0,36,1) 10%, rgba(108,9,121,1) 65%, rgba(160,0,255,1) 100%);
-       
- 
         display: grid;
         place-items: center;
 }
